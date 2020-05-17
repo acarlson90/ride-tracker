@@ -1,11 +1,14 @@
 package com.aaroncarlson.model;
 
 
+import java.sql.Timestamp;
+
 public class Ride {
 
     private Long id;
     private String name;
     private int duration;
+    private Timestamp timestamp;
 
     public Long getId() {
         return id;
@@ -29,5 +32,23 @@ public class Ride {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    @Override
+    public String toString() {
+        return "Ride{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", duration=" + duration +
+                ", timestamp=" + timestamp +
+                '}';
     }
 }
