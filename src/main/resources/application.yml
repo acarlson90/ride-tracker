@@ -1,14 +1,7 @@
-logging:
-  level:
-    org:
-      springframework: INFO
 spring:
-  # H2
-  h2:
-    console:
-      enabled: true
-  # MVC
-  mvc:
-    view:
-      prefix: /WEB-INF/
-      suffix: .jsp
+  # PostgreSQL
+  datasource:
+    url: ${databaseURL}
+    username: ${databaseUsername}
+    password: $[databasePassword}
+    driver-class-name: org.postgresql.Driver
